@@ -1,0 +1,5 @@
+[core]
+	excludesfile = $XDG_CONFIG_HOME/git/ignore
+[user]
+	name = hotsno
+	email = 71658949+hotsno@users.noreply.github.com
