@@ -1,0 +1,14 @@
+#!/bin/bash
+
+current_date=$(date +"%Y-%m-%d")
+todays_wall=$(find "$HOME/.local/share" -type f  -name "wall.*" -newermt "$current_date" 2>/dev/null)
+
+if [ -z "$todays_wall" ]; then
+    rm $HOME/.local/share/wall.* &> /dev/null
+    random_wall=$(find "$HOME/pix/wall" -type f | shuf -n 1)
+    extension="${random_wall##*.}"
+    todays_wall="$HOME/.local/share/wall.$extension"
+    cp "$random_wall" "$todays_wall"
+fi
+
+feh --bg-fill --no-fehbg "$todays_wall"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm $HOME/.local/share/wall.* &> /dev/null
+daily_wall
