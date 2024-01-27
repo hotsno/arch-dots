@@ -1,6 +1,8 @@
 xrdb -merge $XDG_CONFIG_HOME/x11/Xresources # can't be backgrounded!
 picom &
 daily_wall &
-xrandr --output eDP-1 --off &
-xrandr --output DisplayPort-1 --set TearFree on &
+# g14, dGPU off, left USB-C -> dough spectrum
+#xrandr --output eDP-1 --off & 
+#xrandr --output DisplayPort-1 --auto &
+#xrandr --output DisplayPort-1 --set TearFree on &
 exec dwm
