@@ -112,16 +112,12 @@ function save_geometry() {
     if [ $CLIPBOARD -eq 0 ]; then
         mkdir -p "$SAVEDIR"
         grim -g "${cropped_geometry}" "$SAVE_FULLPATH"
-	echo "1"
         grim -g "${cropped_geometry}" "$SAVE_FULLPATH"
-	echo "2"
         output="$SAVE_FULLPATH"
         wl-copy < "$output"
-	echo "3"
         [ -z "$COMMAND" ] || {
             "$COMMAND" "$output"
         }
-	echo "4"
     else
         wl-copy < <(grim -g "${cropped_geometry}" -)
     fi
