@@ -11,4 +11,9 @@ if [ -z "$todays_wall" ]; then
     cp "$random_wall" "$todays_wall"
 fi
 
-feh --bg-fill --no-fehbg "$todays_wall"
+#feh --bg-fill --no-fehbg "$todays_wall"
+swww img "$todays_wall" -t none
+wal -c
+wal -i "$todays_wall" -n -s -t -q
+killall waybar
+waybar &
