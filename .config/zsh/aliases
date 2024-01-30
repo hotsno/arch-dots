@@ -1,2 +1,4 @@
 alias ls="eza --icons --group-directories-first"
 alias ll="exa --icons --group-directories-first -l"
+
+alias a="$HOME/dev/keroro/.venv/bin/python3 $HOME/dev/keroro/main.py"
