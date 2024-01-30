@@ -1,0 +1,75 @@
+{
+    "layer": "top", // Waybar at top layer
+    "height": 23, // Waybar height (to be removed for auto height)
+    // "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["hyprland/workspaces", "custom/dwm-mode", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["battery", "cpu", "memory", "pulseaudio", "clock", "tray"],
+    "hyprland/workspaces": {
+    },
+    "hyprland/window": {
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "[  {:%b %e %I:%M} ]",
+        "tooltip-format": "[ <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt> ]",
+        "format-alt": "[ {:%Y-%m-%d} ]"
+    },
+    "cpu": {
+        "format": "[  {usage}% ]",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "[  {used}GiB ]"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "[ {icon} {temperatureC}°C ]",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": "[ {icon} {percent}% ]",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "[ {icon} {capacity}% ]",
+        "format-charging": "[  {capacity}% ]",
+        "format-plugged": "[  {capacity}% ]",
+        "format-alt": "[ {icon} {time} ]",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "[  {essid} ({signalStrength}%) ]",
+        "format-ethernet": "[  {ipaddr}/{cidr} ]",
+        "tooltip-format": "[  {ifname} via {gwaddr} ]",
+        "format-linked": "[  {ifname} (No IP) ]",
+        "format-disconnected": "[ ⚠ Disconnected ]",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "[ {icon} {volume}% ]",
+        "format-bluetooth": "[ {volume}% {icon} {format_source} ]",
+        "scroll-step": 5.0,
+        "format-bluetooth-muted": "[  {icon} {format_source} ]",
+        "format-muted": "[  {format_source} ]",
+        "format-source": "[ {volume}%  ]",
+        "format-source-muted": "[  ]",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/dwm-mode": {
+        "format": "[]="
+    }
+}
+
