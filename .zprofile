@@ -1,5 +1,5 @@
 export EDITOR="vim"
-export TERMINAL="st"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 
 export XDG_CONFIG_HOME="$HOME/.config"
