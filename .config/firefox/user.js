@@ -6,3 +6,7 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("privacy.history.custom", true);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
 user_pref("browser.bookmarks.file", "");
+user_pref("extensions.pocket.enabled", false);
+user_pref("extensions.screenshots.disabled", true);
+user_pref("browser.aboutConfig.showWarning", false);
+user_pref("ui.key.menuAccessKeyFocuses", false);
