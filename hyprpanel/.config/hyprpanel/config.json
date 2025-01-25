@@ -1,0 +1,97 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.size": "1rem",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "media",
+        "cpu"
+      ],
+      "middle": [],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "media",
+        "cpu"
+      ],
+      "middle": [],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "media",
+        "cpu"
+      ],
+      "middle": [],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "bar.volume.label": false,
+  "bar.network.label": false,
+  "bar.bluetooth.label": false,
+  "bar.clock.format": "%a %b %d  %I:%M %p",
+  "bar.systray.ignore": [
+    "spotify-client"
+  ],
+  "bar.workspaces.workspaces": 7,
+  "bar.workspaces.monitorSpecific": false,
+  "notifications.ignore": [
+    "spotify"
+  ],
+  "wallpaper.enable": false,
+  "scalingPriority": "both",
+  "menus.dashboard.powermenu.avatar.image": "/home/hotsno/Pictures/Profile Pictures/mewo.png",
+  "theme.font.name": "Noto Sans CJK JP",
+  "theme.font.label": "Noto Sans CJK JP",
+  "menus.clock.weather.key": "2273b868d99a411bb1815946251101",
+  "menus.clock.weather.location": "93407",
+  "menus.clock.time.hideSeconds": false,
+  "menus.power.logout": "hyprlock",
+  "menus.dashboard.powermenu.logout": "hyprlock",
+  "menus.dashboard.controls.enabled": true,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "zen-browser",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "~/.config/rofi/launchers/type-1/launcher.sh",
+  "menus.dashboard.directories.left.directory1.label": "󰉍  Downloads",
+  "menus.dashboard.directories.right.directory3.label": "󱂵  Home",
+  "menus.dashboard.directories.right.directory2.label": "󰉏  Pictures",
+  "menus.dashboard.directories.right.directory1.label": "󱧶  Documents",
+  "menus.dashboard.directories.left.directory3.label": "󰚝  Developer",
+  "menus.dashboard.directories.left.directory2.label": "󰉏  Videos",
+  "menus.dashboard.directories.left.directory3.command": "bash -c \"xdg-open $HOME/Developer/\"",
+  "menus.power.showLabel": true,
+  "bar.media.format": "{artist: — }{title}"
+}
