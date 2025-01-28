@@ -5,5 +5,7 @@ today_date=$(date +%Y-%m-%d)
 
 if [[ -f ~/.wallpaper && "$file_mod_date" != "$today_date" ]]; then
   set_random_wallpaper.sh
+else
+  set_wallpaper.sh
 fi
 
