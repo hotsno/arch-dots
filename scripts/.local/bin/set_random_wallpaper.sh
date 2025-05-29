@@ -1,4 +1,4 @@
-RANDOM_WALLPAPER_PATH="$(find $HOME/Developer/wallpapers/images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | sort -R | head -n 1)"
+RANDOM_WALLPAPER_PATH="$(find $HOME/Pictures/wallpapers/images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | sort -R | head -n 1)"
 
 set_wallpaper.sh $RANDOM_WALLPAPER_PATH
 
