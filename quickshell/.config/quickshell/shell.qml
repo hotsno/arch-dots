@@ -28,8 +28,8 @@ Scope {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
 
-        color: "black"
-        opacity: 0.4
+        color: "#111111"
+        opacity: 0.5
       }
 
       // Bar components
@@ -52,7 +52,7 @@ Scope {
                 default: return actWinName;
               }
             }
-            color: "white"
+            color: "#dddddd"
             font.family: "SF Pro Rounded"
             font.weight: Font.ExtraBold
             font.pointSize: 10
@@ -93,7 +93,7 @@ Scope {
                 }
             }
             opacity: 1
-            color: "white"
+            color: "#dddddd"
             font.family: "SF Pro Rounded"
             font.weight: Font.ExtraBold
             font.pointSize: 10

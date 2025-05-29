@@ -10,9 +10,9 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run";
-    show-icons:                 false;
-    display-drun:               "";
-    display-run:                ">";
+    show-icons:                 true;
+    display-drun:               " ";
+    display-run:                " ";
     display-filebrowser:        "";
     display-window:             "";
 	drun-display-format:        "{name}";
@@ -21,9 +21,9 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import                          "shared/colors.rasi"
-@import                          "shared/fonts.rasi"
 
 * {
+    font: "SF Pro Rounded Medium 11";
     border-colour:               var(selected);
     handle-colour:               var(foreground);
     background-colour:           var(background);
@@ -56,7 +56,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
+    width:                       600px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -64,9 +64,9 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               8px;
-    border-color:                @border-colour;
+    border:                      1px solid;
+    border-radius:               20px;
+    border-color:                #33333380;
     cursor:                      "default";
     /* Backgroud Colors */
     background-color:            @background-colour;
@@ -122,7 +122,8 @@ textbox-prompt-colon {
 entry {
     enabled:                     true;
     background-color:            inherit;
-    text-color:                  inherit;
+    text-color:                  #aaa;
+    font:                        "SF Pro Rounded Bold 11";
     cursor:                      text;
     placeholder:                 "Search...";
     placeholder-color:           inherit;
@@ -156,10 +157,10 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       6;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
@@ -177,9 +178,11 @@ listview {
 }
 scrollbar {
     handle-width:                5px ;
-    handle-color:                @handle-colour;
+    handle-color:                #ffffff20;
     border-radius:               8px;
-    background-color:            @alternate-background;
+    background-color:            #ffffff00;
+    handle-rounded-corners:      true;
+    cursor:                      pointer;
 }
 
 /*****----- Elements -----*****/
@@ -187,16 +190,16 @@ element {
     enabled:                     true;
     spacing:                     8px;
     margin:                      0px;
-    padding:                     8px;
+    padding:                     8px 12px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               20px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            var(normal-background);
+    background-color:            transparent;
     text-color:                  var(normal-foreground);
 }
 element normal.urgent {
@@ -209,7 +212,7 @@ element normal.active {
 }
 element selected.normal {
     background-color:            var(selected-normal-background);
-    text-color:                  var(selected-normal-foreground);
+    text-color:                  var(normal-foreground);
 }
 element selected.urgent {
     background-color:            var(selected-urgent-background);
@@ -220,7 +223,7 @@ element selected.active {
     text-color:                  var(selected-active-foreground);
 }
 element alternate.normal {
-    background-color:            var(alternate-normal-background);
+    background-color:            transparent;
     text-color:                  var(alternate-normal-foreground);
 }
 element alternate.urgent {
@@ -234,7 +237,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        24px;
+    size:                        18px;
     cursor:                      inherit;
 }
 element-text {
@@ -260,16 +263,17 @@ mode-switcher{
 }
 button {
     padding:                     8px;
+    margin: 5px 80px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               20px;
     border-color:                @border-colour;
-    background-color:            @alternate-background;
-    text-color:                  inherit;
+    background-color:            transparent;
+    text-color:                  #aaa;
     cursor:                      pointer;
 }
 button selected {
     background-color:            var(selected-normal-background);
-    text-color:                  var(selected-normal-foreground);
+    text-color:                  #aaa;
 }
 
 /*****----- Message -----*****/
