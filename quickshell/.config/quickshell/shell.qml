@@ -49,6 +49,8 @@ Scope {
             text: {
               switch (actWinName) {
                 case "com.mitchellh.ghostty": return "Ghostty";
+                case "tv.plex.Plex": return "Plex";
+                case "vesktop": return "Discord";
                 default: return actWinName;
               }
             }

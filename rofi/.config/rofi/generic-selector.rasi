@@ -1,0 +1,87 @@
+// Modified version of https://github.com/gh0stzk/dotfiles
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "SF Pro Rounded Medium 20";
+}
+
+@import "colors.rasi"
+
+* {
+  main-bg: var(background);
+  main-fg: var(foreground);
+  select-bg: var(selected);
+}
+
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       95%;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                transparent;
+    background-color:            transparent;
+}
+
+mainbox {
+    enabled:                     true;
+    children:                    [ "listview" ];
+    background-color:            @main-bg;
+}
+
+listview {
+    enabled:                     true;
+    lines:                       2;
+    columns:                     6;
+    flow:                        horizontal;
+    spacing:                     50px;
+    padding:                     20px 30px;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               20px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+element selected.normal {
+    background-color:            @select-bg;
+}
+
+element-icon {
+    size:                        20%;
+    cursor:                      inherit;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    padding:                     20px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+

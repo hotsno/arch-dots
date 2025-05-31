@@ -5,4 +5,3 @@ if [ -n "$1" ]; then
 fi
 
 swww img ~/.wallpaper -t wipe --transition-fps 120 --transition-duration 1
-
