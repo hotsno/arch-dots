@@ -6,8 +6,8 @@ import os
 import math
 
 # Configuration
-xdg_config_home = os.environ.get("XDG_CONFIG_HOME")
-thumb_dir = f"{xdg_config_home}/hypr/scripts/alttab"
+home = os.environ.get("HOME")
+thumb_dir = f"{home}/.cache/alttab"
 rofi_override_1 = ""
 rofi_override_2 = ""
 
@@ -20,9 +20,8 @@ windows.sort(key=lambda x: x["focusHistoryID"])
 addresses = []
 titles = []
 for window in windows:
-    if window["workspace"]["id"] >= 0:
-        addresses.append(window["address"])
-        titles.append(window["title"])
+    addresses.append(window["address"])
+    titles.append(window["title"])
 
 # Don't do anything if no windows
 if len(addresses) == 0:
@@ -33,6 +32,7 @@ addresses = addresses[1:] + [addresses[0]]
 titles = titles[1:] + [titles[0]]
 
 # Generate thumbnails
+os.makedirs(thumb_dir, exist_ok=True)
 for addr in addresses:
     if addr:
         subprocess.run([
@@ -61,7 +61,7 @@ rofi_command = [
     "-x11",
     "-dmenu",
     "-format", "i", # Rofi will output the selected index
-    "-theme", f"{xdg_config_home}/rofi/generic-selector.rasi",
+    "-theme", f"{home}/.config/rofi/generic-selector.rasi",
     "-theme-str", rofi_override_1,
     "-theme-str", rofi_override_2
 ]

@@ -18,7 +18,7 @@ source $ZDOTDIR/aliases
 
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
