@@ -29,3 +29,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# VI-mode
+bindkey -v
+
+# 10ms for key sequences
+KEYTIMEOUT=1

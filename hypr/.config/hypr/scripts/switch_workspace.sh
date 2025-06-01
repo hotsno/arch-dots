@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LAST_SWITCH_TIME_FILE="$HOME/.last_hyprland_workspace_switch_time"
+LAST_SWITCH_TIME_FILE="$HOME/.cache/hyprland/.last_hyprland_workspace_switch_time"
 if [ ! -f "$LAST_SWITCH_TIME_FILE" ]; then
   echo "0" >"$LAST_SWITCH_TIME_FILE"
 fi
