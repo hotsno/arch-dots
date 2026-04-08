@@ -2,10 +2,10 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[manager]
+[mgr]
 
 keymap = [
-  { on = [ "C-n" ], run = '''
+  { on = [ "<C-n>" ], run = '''
     shell 'dragon-drop -x -i -T "$1"' --confirm
     ''' },
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
